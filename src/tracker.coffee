@@ -75,7 +75,7 @@ class VASTTracker extends EventEmitter
                 events.push "progress-#{Math.round(progress)}"
 
                 for quartile, time of @quartiles
-                    events.push quartile if time <= progress <= (time + 1)
+                    events.push quartile if time <= progress
 
             for eventName in events
                 @track eventName, yes
